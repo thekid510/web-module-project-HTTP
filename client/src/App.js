@@ -12,12 +12,14 @@ import FavoriteMovieList from './components/FavoriteMovieList';
 import axios from 'axios';
 
 const App = (props) => {
+  console.log(props)
   const [movies, setMovies] = useState([]);
   const [favoriteMovies, setFavoriteMovies] = useState([]);
   const { id } = useParams();
 
   useEffect(()=>{
-    axios.get('http://localhost:5000/api/movies')
+    // axios.get(`http://localhost:5000/api/movies/${id}`)
+    axios.get('http://localhost:5000/api/movies/')
       .then(res => {
         setMovies(res.data);
       })
