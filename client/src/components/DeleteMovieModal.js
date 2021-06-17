@@ -1,4 +1,8 @@
 import React from 'react';
+import axios from 'axios';
+import e from 'cors';
+
+
 
 const DeleteMovieModal = () => {
     return (<div id="deleteMovieModal">
